@@ -1,0 +1,36 @@
+.hoverable-link {
+    color: #76ABAE;
+    text-decoration: none;
+    padding: 10px 30px;
+    display: inline-block;
+    position: relative; /* Needed for pseudo-element positioning */
+}
+
+.hoverable-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; /* Adjust as needed */
+    background-color: #76ABAE; /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth transition for the width */
+}
+
+.hoverable-link.white {
+    color: #FFEEF4; /* White text color */
+}
+
+.hoverable-link.white::before {
+    background-color: #FFEEF4; /* White underline color */
+}
+
+.hoverable-link:hover::before {
+    width: 100%; /* Expand underline on hover */
+}
+
+@media screen and (max-width: 768px) {
+    .hoverable-link {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}

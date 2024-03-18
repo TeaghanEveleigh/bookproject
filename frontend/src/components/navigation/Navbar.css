@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+body {
+    font-size: 16px;
+    font-family: 'Lora', serif; /* Apply Lora font */
+    background-color: #31363F;
+    color: #76ABAE; /* Text color */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #222831;
+ 
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    font-family: 'Lora', serif; /* Apply Lora font */
+    z-index: 1000; /* Ensure the navbar is above other content */
+}
+.navbar.light-mode {
+    background-color: #94A684; /* Light mode background color */
+    color: #000000; /* Light mode text color */
+  }
+  
+  .navbar.dark-mode {
+    background-color: #1a1d22; /* Dark mode background color */
+    color: #ffffff; /* Dark mode text color */
+  }
+  
+
+

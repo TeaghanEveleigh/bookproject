@@ -1,0 +1,28 @@
+/* ProfileDropdown.css */
+.profile-dropdown {
+    position: relative;
+  }
+  
+  .profile-toggle {
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .dropdown-content > div {
+    padding: 8px 0;
+    cursor: pointer;
+  }
+  
+  .dropdown-content > div:hover {
+    background-color: #f0f0f0;
+  }
+  
