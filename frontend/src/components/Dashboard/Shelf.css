@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: row;
     /* Enable wrapping for the cards */
-    
+    justify-content: center;
      /* Adjust padding as needed */
   }
   
@@ -22,6 +22,8 @@
     background-color: rgba(0, 0, 0, 0.1);
     overflow-x: auto; /* Enable horizontal scrolling for overflow */
     border-radius: 10px;
+    margin-top: 20px!important;
+    justify-content: center;
 }
 
 /* Card container */
@@ -35,16 +37,19 @@
     width: calc(33.33% - 20px); /* Adjust card width based on the number of cards */
     padding: 20px; /* Adjust padding as needed */
     margin-right: 40px; /* Add spacing between cards */
+  
 }
 
 /* Shelf */
 .shelf {
+    margin-top: 20px!important;
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 20px; /* Height of the shelf */
-    background-color: rgba(0, 0, 0, 0.1); /* Translucent gray background */
+    height: 130px; /* Height of the shelf */
+    background-color: rgba(0, 0, 0, 0.1); 
+    justify-content: center;/* Translucent gray background */
 }
 
 /* Show more button */
@@ -52,4 +57,13 @@
     text-align: center;
     margin-top: 20px;
     margin-bottom: 5px;
+    z-index: 600;
+}
+.title{
+    font-size: 30px;
+   
+    margin-bottom: 20px;
+    text-decoration: underline;
+    text-align: center;
+    
 }

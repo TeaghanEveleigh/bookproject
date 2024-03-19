@@ -1,12 +1,12 @@
 import React from 'react';
 import './bookCard.css';
 
-function BookCard(props) {
+function BookCard({cover}) {
   return (
     <div className="book-card">
       <div className="book-cover">
         <div className="cover-image" style={{ 
-          backgroundImage: "url('" + props.cover + "')",
+          backgroundImage: "url('" + cover + "')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat"

@@ -8,8 +8,9 @@ const renderUserLibraries = (isDarkMode) => {
     return (
       <div style={{position : "relative" }}>
         
-        <Shelf isDarkMode={isDarkMode} />
-        
+        <Shelf title="To read"isDarkMode={isDarkMode} />
+        <Shelf title="Reccomended"isDarkMode={isDarkMode} />
+        <Shelf title="Reading"isDarkMode={isDarkMode} />
       </div>
     );
   }
