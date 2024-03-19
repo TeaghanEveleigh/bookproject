@@ -3,7 +3,8 @@
     text-decoration: none;
     padding: 10px 30px;
     display: inline-block;
-    position: relative; /* Needed for pseudo-element positioning */
+    position: relative;
+     /* Needed for pseudo-element positioning */
 }
 
 .hoverable-link::before {
@@ -12,8 +13,8 @@
     bottom: 0;
     left: 0;
     width: 0;
-    height: 2px; /* Adjust as needed */
-    background-color: #76ABAE; /* Color of the underline */
+    height: 3.5px; /* Adjust as needed */
+    background-color: currentColor; /* Set background color to current text color */
     transition: width 0.3s ease; /* Smooth transition for the width */
 }
 
@@ -22,12 +23,11 @@
 }
 
 .hoverable-link.white::before {
-    background-color: #FFEEF4; /* White underline color */
+    background-color: currentColor; /* Set underline color to current text color */
 }
 
 .hoverable-link:hover::before {
     width: 100%; /* Expand underline on hover */
-    
 }
 
 @media screen and (max-width: 768px) {
@@ -35,3 +35,7 @@
         padding: 10px; /* Adjust padding for smaller screens */
     }
 }
+.align {
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Align items vertically */
+  }

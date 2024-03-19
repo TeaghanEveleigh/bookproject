@@ -1,16 +1,17 @@
 import React from 'react';
 import './bookCard.css';
 
-function BookCard() {
+function BookCard(props) {
   return (
-    <div className="book">
-     
-      <div className="cover" style={{ 
-        backgroundImage: "url('https://booksandbao.com/wp-content/uploads/2021/04/the-name-of-the-wind-audiobook-300x300.jpg')",
-        backgroundSize: "cover", // Ensure the background image covers the entire container
-        backgroundPosition: "center", // Center the background image
-        backgroundRepeat: "no-repeat" // Prevent the background image from repeating
-      }}>
+    <div className="book-card">
+      <div className="book-cover">
+        <div className="cover-image" style={{ 
+          backgroundImage: "url('" + props.cover + "')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat"
+        }}></div>
+        <div><p className='title'>the wise mans fear</p></div>
       </div>
     </div>
   );

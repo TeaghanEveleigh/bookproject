@@ -1,34 +1,12 @@
-/* Shelf container */
-.shelf-container {
-    position: relative;
-    width: 100%;
-  }
-  
-  /* Shelf */
-  .shelf {
-    background-color: #8b572a; /* Brown color for shelf */
-    height: 20px; /* Height of the shelf */
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-  }
-  
-  /* Cards */
+    /* Cards */
   .card-container {
     display: flex;
-    flex-wrap: wrap; /* Enable wrapping for the cards */
-
-    padding: 20px; /* Adjust padding as needed */
+    flex-direction: row;
+    /* Enable wrapping for the cards */
+    
+     /* Adjust padding as needed */
   }
   
-  .card {
-    background-color: #ffffff; /* White color for cards */
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: calc(33.33% - 20px); /* Adjust card width based on the number of cards */
-    padding: 20px; /* Adjust padding as needed */
-    margin: 10px; /* Adjust margin as needed */
-  }
   
   /* Show more button */
   .show-more {
@@ -43,13 +21,11 @@
     padding-bottom: 20px;
     background-color: rgba(0, 0, 0, 0.1);
     overflow-x: auto; /* Enable horizontal scrolling for overflow */
+    border-radius: 10px;
 }
 
 /* Card container */
-.card-container {
-    display: flex;
-    padding: 20px; /* Adjust padding as needed */
-}
+
 
 /* Individual card */
 .card {
@@ -58,7 +34,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: calc(33.33% - 20px); /* Adjust card width based on the number of cards */
     padding: 20px; /* Adjust padding as needed */
-    margin-right: 20px; /* Add spacing between cards */
+    margin-right: 40px; /* Add spacing between cards */
 }
 
 /* Shelf */

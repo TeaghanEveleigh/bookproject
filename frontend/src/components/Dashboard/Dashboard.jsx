@@ -15,7 +15,7 @@ const renderUserLibraries = (isDarkMode) => {
   }
 
 function Dashboard({ isDarkMode }) {
-    const userLoggedIn = true; // Assume the user is logged in for demonstration
+    const userLoggedIn = false; // Assume the user is logged in for demonstration
   // For demonstration, you should implement your logic for dark mode
     // For demonstration, you should implement your logic for dark mode
     // Toggle dark mode class on body element
@@ -27,11 +27,12 @@ function Dashboard({ isDarkMode }) {
         document.body.classList.remove('dark-mode');
       }
     return (
-      <div className="Dash">
+        <div className="content-wrapper"><div className="Dash">
         <Navbar isDarkMode = {isDarkMode}/>
         {renderUserLibraries(isDarkMode)}
    
-      </div>
+      </div></div>
+      
     );
     }
     export default Dashboard;

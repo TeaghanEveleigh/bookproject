@@ -1,6 +1,6 @@
 /* Update for dark mode */
 body.light-mode {
-    background-color: #E4E4D0; /* Light mode background color */
+    background-color: #EEE7DA; /* Light mode background color */
     color: #000000; /* Light mode text color */
   }
   
@@ -49,4 +49,6 @@ body.light-mode {
     color: inherit; /* Inherit text color from parent element */
     font-family: 'Lora', serif;
   }
-  
+  .content-wrapper {
+    padding-top: 50px; /* Adjust the value as needed */
+  }
