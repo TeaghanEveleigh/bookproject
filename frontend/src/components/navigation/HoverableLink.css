@@ -27,6 +27,7 @@
 
 .hoverable-link:hover::before {
     width: 100%; /* Expand underline on hover */
+    
 }
 
 @media screen and (max-width: 768px) {

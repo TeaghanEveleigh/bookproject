@@ -1,21 +1,23 @@
 import React from "react";
 import "./Dashboard.css";
 import Navbar from "../navigation/Navbar";
-import Library from "../Library/Library";
+import Library from "./Library";
+import Shelf from "./Shelf";
 
-const renderUserLibraries = () => {
+const renderUserLibraries = (isDarkMode) => {
     return (
       <div style={{position : "relative" }}>
-        <h1 >Teaghan's Library</h1>
-        <p>Here are all the libraries you have access to</p>
+        
+        <Shelf isDarkMode={isDarkMode} />
+        
       </div>
     );
   }
-  
+
 function Dashboard({ isDarkMode }) {
     const userLoggedIn = true; // Assume the user is logged in for demonstration
   // For demonstration, you should implement your logic for dark mode
-  
+    // For demonstration, you should implement your logic for dark mode
     // Toggle dark mode class on body element
     if (isDarkMode) {
         document.body.classList.add('dark-mode');
@@ -25,9 +27,11 @@ function Dashboard({ isDarkMode }) {
         document.body.classList.remove('dark-mode');
       }
     return (
-      <div className="App">
+      <div className="Dash">
         <Navbar isDarkMode = {isDarkMode}/>
-        {renderUserLibraries()}
+        {renderUserLibraries(isDarkMode)}
+   
       </div>
     );
     }
+    export default Dashboard;

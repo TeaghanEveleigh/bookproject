@@ -11,7 +11,7 @@ body.dark-mode {
 
 .App {
   text-align: center;
-  padding: 60px;
+
 }
 
 .App-header {
@@ -49,3 +49,23 @@ p {
   color: inherit; /* Inherit text color from parent element */
   font-family: 'Lora', serif;
 }
+.App {
+  position: relative;
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #555;
+}
+

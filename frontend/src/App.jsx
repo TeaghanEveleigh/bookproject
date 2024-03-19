@@ -1,33 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import Navbar from './components/navigation/Navbar';
-
-const renderUserLibraries = () => {
-  return (
-    <div style={{position : "relative" }}>
-      <h1 >Teaghan's Library</h1>
-      <p>Here are all the libraries you have access to</p>
-    </div>
-  );
-}
+import Dashboard from './components/Dashboard/Dashboard';
 
 function App() {
-  // Assume you have a state variable to determine whether the app is in light or dark mode
-  const isDarkMode = false; // For demonstration, you should implement your logic for dark mode
-  
-  // Toggle dark mode class on body element
-  if (isDarkMode) {
-    document.body.classList.add('dark-mode');
-    document.body.classList.remove('light-mode');
-  } else {
-    document.body.classList.add('light-mode');
-    document.body.classList.remove('dark-mode');
-  }
+  // State variable for dark mode
+  const [isDarkMode, setIsDarkMode] = useState(true); // For demonstration, you should implement your logic for dark mode
+
+  // Function to toggle dark mode
+  const toggleDarkMode = () => {
+    setIsDarkMode(prevMode => !prevMode);
+  };
 
   return (
-    <div className="App">
-      <Navbar isDarkMode = {isDarkMode}/>
-      {renderUserLibraries()}
+    <div className={`App ${isDarkMode ? 'dark' : 'light'}`}>
+      <Dashboard isDarkMode={isDarkMode} />
+      <button className="dark-mode-toggle" onClick={toggleDarkMode}>
+        {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+      </button>
     </div>
   );
 }
