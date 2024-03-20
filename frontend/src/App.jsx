@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Dashboard from './components/Dashboard/Dashboard';
+import Login from './components/LoginPage/Login';
 
 function App() {
   // State variable for dark mode
@@ -13,7 +14,7 @@ function App() {
 
   return (
     <div className={`App ${isDarkMode ? 'dark' : 'light'}`}>
-      <Dashboard isDarkMode={isDarkMode} />
+      <Login />
       <button className="dark-mode-toggle" onClick={toggleDarkMode}>
         {isDarkMode ? 'Light Mode' : 'Dark Mode'}
       </button>

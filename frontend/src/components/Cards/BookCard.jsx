@@ -6,7 +6,7 @@ function BookCard({cover}) {
     <div className="book-card">
       <div className="book-cover">
         <div className="cover-image" style={{ 
-          backgroundImage: "url('" + cover + "')",
+          backgroundImage: "url('" + cover+ "')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat"

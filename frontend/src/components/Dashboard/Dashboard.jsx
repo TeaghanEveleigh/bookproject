@@ -4,6 +4,8 @@ import Navbar from "../navigation/Navbar";
 import Library from "./Library";
 import Shelf from "./Shelf";
 
+
+
 const renderUserLibraries = (isDarkMode) => {
     return (
       <div style={{position : "relative" }}>
@@ -29,6 +31,7 @@ function Dashboard({ isDarkMode }) {
       }
     return (
         <div className="content-wrapper"><div className="Dash">
+        
         <Navbar isDarkMode = {isDarkMode}/>
         {renderUserLibraries(isDarkMode)}
    
