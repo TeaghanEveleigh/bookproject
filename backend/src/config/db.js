@@ -4,11 +4,14 @@ const { Pool } = require('pg');
 
 // Database configuration
 const dbConfig = {
-  user: '',
-  password: '',
-  host: '',
+  host: 'database-2.cjkou6wqywbo.ap-southeast-2.rds.amazonaws.com',
+  user: 'postgres',
+  password: 'peopleeat8Apples',
+  database: 'BOOKs',
   port: 5432,
-  database: '',
+  ssl: {
+    rejectUnauthorized: false
+  }
 };
 
 // Create a new pool instance

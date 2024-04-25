@@ -1,0 +1,83 @@
+.book-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.book {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: var(--light-color-two);
+}
+.lightBook{
+
+}
+.darkBook{
+  background-color: var(--dark-color-two);
+}
+.darkBook .titleOfBook{
+  color: rgb(0, 0, 0);
+}
+.darkBook .author{
+  color: var(--light-color-four);
+}
+.darkBook hr{
+  color: var(--light-color-four);
+}
+
+.cover {
+  width: 100px;
+  height: 150px;
+  margin-right: 20px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.titleOfBook {
+  color: white;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 10px;
+  padding: 0px;
+}
+
+.author {
+  font-size: 1em;
+  color: var(--light-color-four);
+
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #333;
+}
+.show{
+  margin-top: 30px;
+
+}

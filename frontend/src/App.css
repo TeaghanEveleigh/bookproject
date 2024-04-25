@@ -1,16 +1,83 @@
+/* Update for dark mode */
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+:root{
+  --dark-color-one:#3C2A21;
+  --dark-color-two:#D5CEA3;
+  --dark-color-three:#D5CEA3;
+  --dark-color-four:#6a513d;
+  --light-color-one:#776B5D;
+  --light-color-two:#B0A695;
+  --light-color-three:#EBE3D5;
+  --light-color-four:#F3EEEA;
+}
+/* Apply Lora font to the body */
+body {
+    font-size: 20px;
+    font-family: 'Lora', serif;
+     /* Default text color */
+}
+
+/* Apply dark mode styles */
+body.dark-mode {
+  background-color: var(--dark-color-four); /* Dark mode background color */
+  color: #69a4a8; /* Dark mode text color */
+}
+
+/* Apply light mode styles */
+body.light-mode {
+  background-color: var(--light-color-four); /* Light mode background color */
+  color: #31363F; /* Light mode text color */
+}
+
+/* Apply Lora font to all elements */
+body, .App {
+    font-family: 'Lora', serif;
+}
+
+/* Center align elements within .App */
 .App {
   text-align: center;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Style for dark mode toggle button */
+.dark-mode-toggle-dark {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--dark-color-one);
+  color: white;
+  cursor: pointer;
+  border: 1px solid #ffffff;
+}
+.dark-mode-toggle-light {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--light-color-one);
+  color: white;
+  cursor: pointer;
+  border: 1px solid #ffffff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dark-mode-toggle-dark:hover {
+  background-color: var(--dark-color-three);
+}
+.dark-mode-toggle-light:hover {
+  background-color: var(--light-color-two);
+}
+/* Update for dark mode */
+
+
+.Dash {
+  text-align: center;
+  margin-top: 35px;
 }
 
 .App-header {
@@ -21,18 +88,38 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: inherit; /* Inherit text color from body */
 }
-
-.App-link {
-  color: #61dafb;
+p {
+  font-size: 20px;
+  color: inherit; /* Inherit text color from parent element */
+  font-family: 'Lora', serif;
 }
+.content-wrapper {
+  padding-top: 50px; /* Adjust the value as needed */
+}
+.dark1{
+  background-color: var(--dark-color-one);
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.light1{
+  background-color: var(--light-color-one);
+}
+.dark2{
+  background-color: var(--dark-color-two);
+}
+.light2{
+  background-color: var(--light-color-two);
+}
+.dark3{
+  background-color: var(--dark-color-three);
+}
+.light3{
+  background-color: var(--light-color-three);
+}
+.dark4{
+  background-color: var(--dark-color-four);
+}
+.light4{
+  background-color: var(--light-color-four);
 }

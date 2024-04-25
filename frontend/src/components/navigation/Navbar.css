@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+ 
+ 
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    font-family: 'Lora', serif; /* Apply Lora font */
+    z-index: 1000; /* Ensure the navbar is above other content */
+}
+.navbar.light-mode {
+    background-color: var(--light-color-one); /* Light mode background color */
+    color: #000000; /* Light mode text color */
+  }
+  
+  .navbar.dark-mode {
+    background-color: var(--dark-color-one); /* Dark mode background color */
+    color: #ffffff; /* Dark mode text color */
+  }
+.links-content{
+   display: flex;
+   justify-content: center;
+}
+.about-help{
+    
+}
+.logout{
+  margin-left: auto;
+}
+.search-bar{
+   border-radius: 10px;
+  padding-left: 15px;
+  width: auto;
+  margin-left: 20px;
+  height: 3fr;
+  
+
+  margin-top: auto;
+  margin-bottom: auto;
+  
+ 
+  
+}
+.svg-class{
+  margin-left: 10px;
+}
+.not-logged-in{
+  margin-left: auto;
+}

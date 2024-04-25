@@ -16,11 +16,10 @@ const createUserTableQuery = `
   CREATE TABLE IF NOT EXISTS users (
     id SERIAL PRIMARY KEY,
     email VARCHAR(255) NOT NULL UNIQUE,
-    username VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    preferences VARCHAR(255),
-    dark_mode BOOLEAN,
-    user_id INTEGER REFERENCES users(id)
+    dark_mode BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
   );
 `;
 
@@ -33,15 +32,7 @@ const checkLibrariesTableQuery = `
   );
 `;
 
-// Query to create libraries table
-const createLibraryTableQuery = `
-  CREATE TABLE IF NOT EXISTS libraries (
-    id SERIAL PRIMARY KEY,
-    library_name VARCHAR(255) NOT NULL,
-    library_photo_url VARCHAR(255),
-    user_id INTEGER REFERENCES users(id)
-  );
-`;
+
 
 // Query to check if books table exists
 const checkBooksTableQuery = `
@@ -49,6 +40,16 @@ const checkBooksTableQuery = `
     SELECT FROM information_schema.tables 
     WHERE table_schema = 'public' 
     AND table_name = 'books'
+  );
+`;
+
+// Query to create libraries table
+const createLibraryTableQuery = `
+  CREATE TABLE IF NOT EXISTS libraries (
+    id SERIAL PRIMARY KEY,
+    library_name VARCHAR(255) NOT NULL,
+    library_photo_url VARCHAR(255),
+    user_id INTEGER REFERENCES users(id)
   );
 `;
 
@@ -63,9 +64,11 @@ const createBookTableQuery = `
     number_of_pages INTEGER,
     estimated_read_time VARCHAR(50),
     publisher VARCHAR(255),
-    book_link VARCHAR(255)
+    book_link VARCHAR(255),
+    library_id INTEGER REFERENCES libraries(id)
   );
 `;
+
 
 // Execute table creation queries
 async function createTables() {
@@ -106,4 +109,4 @@ async function createTables() {
   }
 }
 
-createTables();
+module.exports = createTables;

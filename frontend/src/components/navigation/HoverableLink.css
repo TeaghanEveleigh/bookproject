@@ -1,0 +1,41 @@
+.hoverable-link {
+    color: var(--dark-color-three);
+    text-decoration: none;
+    padding: 10px 30px;
+    display: inline-block;
+    position: relative;
+     /* Needed for pseudo-element positioning */
+}
+
+.hoverable-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3.5px; /* Adjust as needed */
+    background-color: currentColor; /* Set background color to current text color */
+    transition: width 0.3s ease; /* Smooth transition for the width */
+}
+
+.hoverable-link.white {
+    color: var(--light-color-three); /* White text color */
+}
+
+.hoverable-link.white::before {
+    background-color: currentColor; /* Set underline color to current text color */
+}
+
+.hoverable-link:hover::before {
+    width: 100%; /* Expand underline on hover */
+}
+
+@media screen and (max-width: 768px) {
+    .hoverable-link {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+.align {
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Align items vertically */
+  }
