@@ -1,3 +1,4 @@
+const { system } = require('nodemon/lib/config');
 const pool = require('../config/db');
 const { hashPassword, comparePasswords } = require('./securePassword');
 
@@ -50,45 +51,22 @@ const createUser = async (email, password) => {
         throw error;
     }
 }
-const createUserLibrary = async (userId, libraryName, libraryPhotoUrl) => {
-    const query = {
-        text: 'INSERT INTO libraries (user_id, library_name) VALUES ($1, $2, $3)',
-        values: [userId, libraryName],
-    };
-    await pool.query(query);
-}
-const getUserLibraries = async (userId) => {
-    const query = {
-        text: 'SELECT * FROM libraries WHERE user_id = $1',
-        values: [userId],
-    };
-    const result = await pool.query(query);
-    return result.rows;
-}
+const toggleDarkmode = async (email ) => {
+    try {
+        const query ={test: "UPDATE users SET dark_mode = !dark_mode WHERE email=$1", values: email} 
+        await pool.query(query);
+    } catch (error) {
+        console.log(error);
+    }
+};
 
-const getLibraryBooks = async (libraryId) => {
-    const query = {
-        text: 'SELECT * FROM books WHERE library_id = $1',
-        values: [libraryId],
-    };
-    const result = await pool.query(query);
-    return result.rows;
-}
-const createBook = async (libraryId, bookName, bookPreviewPicture, bookDescription, bookAuthors, numberOfPages, estimatedReadTime, publisher, bookLink) => {
-    const query = {
-        text: 'INSERT INTO books (library_id, book_name, book_preview_picture, book_description, book_authors, number_of_pages, estimated_read_time, publisher, book_link) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)',
-        values: [libraryId, bookName, bookPreviewPicture, bookDescription, bookAuthors, numberOfPages, estimatedReadTime, publisher, bookLink],
-    };
-    await pool.query(query);
-}
+
+
 
 
 module.exports = {
     checkEmailExists,
     checkPasswordCorrect,
     createUser,
-    createUserLibrary,
-    getUserLibraries,
-    getLibraryBooks,
-    createBook,
+    toggleDarkmode
 };

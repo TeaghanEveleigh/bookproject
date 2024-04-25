@@ -1,7 +1,11 @@
 const express = require("express");
+const axios = require("axios");
 const bodyParser = require("body-parser");
-const cookieParser = require("cookie-parser");
+const session = require("express-session");
 const userRoutes = require('./src/routes/userRoutes');
+const bookRoutes = require('./src/routes/bookRoutes');
+const libraryRoutes = require('./src/routes/libraryRoutes');
+const discoverRoutes = require('./src/routes/discoverRoutes');
 const pool = require("./src/config/db.js");
 const  createTables  = require("./src/config/createTables.js");
 const { options } = require("nodemon/lib/config/index.js");
@@ -19,10 +23,18 @@ pool.connect((err) => {
     }
 });
 
+// Configure express-session middleware
 
 
-// Use the routes
 app.use('/user', userRoutes);
+app.use('/book', bookRoutes);
+app.use('/library', libraryRoutes);
+app.use('/discover', discoverRoutes);
+
+app.get('/',  (req, res) => {
+    res.send('Hello World!');
+});
+
 
 app.listen(3001, () => {
     console.log("Server is running on port 3001");
