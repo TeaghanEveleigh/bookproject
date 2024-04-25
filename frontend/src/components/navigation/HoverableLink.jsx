@@ -6,7 +6,8 @@ function HoverableLink(props) {
         color: props.color, // Set color from props
         textDecoration: "none",
         fontSize: props.fontSize,
-        fontWeight: props.font // Optionally remove underline
+        fontWeight: props.font, // Optionally remove underline
+        zIndex: props.zIndex
     };
 
     return (

@@ -1,5 +1,5 @@
 .hoverable-link {
-    color: #76ABAE;
+    color: var(--dark-color-three);
     text-decoration: none;
     padding: 10px 30px;
     display: inline-block;
@@ -19,7 +19,7 @@
 }
 
 .hoverable-link.white {
-    color: #FFEEF4; /* White text color */
+    color: var(--light-color-three); /* White text color */
 }
 
 .hoverable-link.white::before {

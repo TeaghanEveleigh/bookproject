@@ -1,0 +1,14 @@
+
+
+
+.dark3{
+    width: 100%;
+   background-color: var(--light-color-three);
+   height: 100px;
+}
+.light3{
+    width: 100%;
+   background-color: var(--light-color-three);
+   height: 100px;
+   
+}

@@ -1,21 +1,25 @@
 import React from "react";
 import "./Login.css";
 import Navbar from "../navigation/Navbar";
+import Example from "./Example";
 
-function Login() {
-    return (
 
-        <div className="login">
-        <Navbar isDarkMode={true}/>
-        <div className="login-content">
-            <h1>Login</h1>
-            <form>
-            <input type="text" placeholder="Username" />
-            <input type="password" placeholder="Password" />
-            <button type="submit">Login</button>
-            </form>
+function Login({isDarkMode}) {
+    if (isDarkMode) {
+        document.body.classList.add('dark-mode');
+        document.body.classList.remove('light-mode');
+      } else {
+        document.body.classList.add('light-mode');
+        document.body.classList.remove('dark-mode');
+      }
+    return (<div className="login">
+        <Navbar isDarkMode={isDarkMode} />
+        
+        <Example />
+        
         </div>
-        </div>
+        
+        
     );
     }
     export default Login;

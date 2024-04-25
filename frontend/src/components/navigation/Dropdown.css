@@ -1,6 +1,7 @@
 .dropdown {
     position: relative;
     margin-left: 0px;
+  
   }
   
   .dropdown-content {
@@ -43,9 +44,13 @@
   button:hover {
     background-color: #f4f4f4;
   }
-  body {background-color : #ededed; font-family : "Open Sans", sans-serif;}
+  .close{
+    font-size : 50px;
 
-h1 {padding: 40px; text-align: center; font-size: 1.5em;}
+  }
+
+
+h1 {padding: 40px; text-align: center; }
 
 li a {text-decoration : none; color : #ffffff; font-size:auto;}
 li{
@@ -65,8 +70,9 @@ li{
     transition: all 0.3s ease;
 }
 li:hover{
-    background-color: #9fb28f;
+    background-color: var(--light-color-two);
     color: #000000;
+    
 
 
 }
@@ -79,7 +85,7 @@ nav {
 }
 
 span {
-  padding : 30px;
+  /* padding : 30px; */
   background: transparent;
   color : white;
   font-size : 1.2em;
@@ -93,11 +99,12 @@ span {
 .slide {
   clear:both;
   width:100%;
-  height:0px;
+  height: 0;
   overflow: hidden;
   text-align: center;
-  transition: height .4s ease;
+  transition: height 0.4s ease; /* Ensure transition is applied */
 }
+
 
 .slide li {padding : 20px;
     
@@ -108,4 +115,49 @@ span {
 #touch:checked + .slide {height: 10rem;} 
  svg{
     float: left;
+    /* margin-bottom: 20px; */
  } 
+ .invisible {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.menu-icon {
+  text-align: left;
+}
+.darkmenu{
+  color: var(--dark-color-two);
+}
+.lightmenu{
+  color: var(--light-color-three);
+}
+.darkclose{
+  color: var(--dark-color-two)
+}
+.lightclose{
+  color: var(--light-color-three);
+}
+.lightclose:hover{
+  scale: 1.2;
+  transition: all 0.3s ease;
+}
+.darkclose:hover{
+  scale: 1.2;
+  transition: all 0.3s ease;
+}
+.lightmenu:hover{
+  scale: 1.2;
+  transition: all 0.3s ease;
+}
+.darkmenu:hover{
+  scale: 1.2;
+  transition: all 0.3s ease;
+}
+.material-icons{
+  font-size: 50px;
+  border-radius: 20px;
+  
+}
