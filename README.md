@@ -2,7 +2,7 @@
 
 Welcome to the Book Tracking App  repository! This application allows users to keep track of their favorite books using Google's Book API. The frontend is developed using React and supports Dark Mode for a personalized user experience.
 
-**[View the Book Tracking App ][Website](https://teaghaneveleigh.github.io/book-front/)**
+**[View the Book Tracking App ] [Website](https://teaghaneveleigh.github.io/book-front/)**
 
 ## Key Features
 
