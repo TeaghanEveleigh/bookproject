@@ -2,7 +2,7 @@
 
 Welcome to the Book Tracking App  repository! This application allows users to keep track of their favorite books using Google's Book API. The frontend is developed using React and supports Dark Mode for a personalized user experience.
 
-**[View the Book Tracking App ] [Website](https://main--elegant-griffin-6e8516.netlify.app/discover)**
+**[View the Book Tracking App ] [Website](https://main--elegant-griffin-6e8516.netlify.app/login)**
 
 ## Key Features
 
